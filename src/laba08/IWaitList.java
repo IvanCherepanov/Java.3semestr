@@ -1,4 +1,4 @@
-package laba8;
+package laba08;
 
 import java.util.Collection;
 

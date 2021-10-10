@@ -1,4 +1,4 @@
-package laba8;
+package laba08;
 
 public class UnfairWaitList<E> extends WaitList<E> {
     public UnfairWaitList() {

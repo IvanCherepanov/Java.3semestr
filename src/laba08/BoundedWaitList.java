@@ -1,4 +1,4 @@
-package laba8;
+package laba08;
 
 public class BoundedWaitList<E> extends WaitList<E> {
     private final int capacity; //неизменяемая
