@@ -1,5 +1,5 @@
 
-package laba9;
+package laba24;
 
 import java.util.Scanner;
 // пока не разобрался куда вставить throws Exception

@@ -1,4 +1,4 @@
-package laba9;
+package laba24;
 // генерирование исключения оператором throw
 // решение квадратного уравнения
 class QuadraticEquation {

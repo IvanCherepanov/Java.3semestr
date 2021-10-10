@@ -1,4 +1,4 @@
-package laba9;
+package laba24;
 
 import java.util.Scanner;
 //блок finally выполняется всегда, независимо от исключения

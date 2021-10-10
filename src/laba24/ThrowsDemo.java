@@ -1,4 +1,4 @@
-package laba9;
+package laba24;
 //Листинг 4
 //первый вывод: Exception in thread "main" java.lang.NullPointerException: null key in getDetails
 //	at laba9.ThrowsDemo.getDetails(ThrowsDemo.java:6)

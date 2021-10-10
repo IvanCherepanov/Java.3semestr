@@ -1,6 +1,5 @@
-package laba9;
+package laba24;
 
-import javax.swing.plaf.IconUIResource;
 import java.util.Scanner;
 //задание 2 -
 //Листинг 3 -
