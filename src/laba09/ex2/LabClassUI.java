@@ -74,18 +74,17 @@ public class LabClassUI extends JFrame {
             //startStudents[i][0] = ((Integer)(students.get(i).getIdNumber())).toString();
             startStudents[i][0] = ((students.get(i).getIdNumber()));
             System.out.println(startStudents[i][0].getClass());
-            startStudents[i][1] = ((Integer)(students.get(i).getMark())).toString();
+            startStudents[i][1] = ((students.get(i).getMark()));
             System.out.println(startStudents[i][1].getClass());
             startStudents[i][2] = students.get(i).getSurname();
         }
-        studTable = new JTable( new DefaultTableModel(startStudents, columns)){
+        DefaultTableModel model =  new DefaultTableModel(startStudents, columns){
             @Override
             public Class getColumnClass(int column) {
                 switch (column) {
                     case 0:
-                        return Integer.class; //работает с багом
                     case 1:
-                        return Integer.class;
+                        return Integer.class; //работает с багом
                     case 2:
                     default:
                         return String.class;
@@ -97,7 +96,7 @@ public class LabClassUI extends JFrame {
                 return false;
             }
         };
-
+        studTable = new JTable(model);
         JTableHeader header = studTable.getTableHeader();
         header.setReorderingAllowed(false);
         header.setResizingAllowed(false);

@@ -19,11 +19,11 @@ public class help {
                     case 0:
                         return Integer.class;
                     case 1:
-                        return String.class;
-                    case 2:
                         return Integer.class;
-                    default:
+                    case 2:
                         return String.class;
+                    default:
+                        return Integer.class;
                 }
             }
         };

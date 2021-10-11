@@ -73,8 +73,8 @@ public class LabClass implements Comparator<Student> {
         arrayList.add(new Student(new Integer(12),67,"Селиверстов Наум Никитевич"));
         arrayList.add(new Student(new Integer(10),65,"Миронов Осип Тимурович"));
         arrayList.add(new Student(new Integer(5),66,"Козлов Арсений Богданович"));
-        arrayList.add(new Student(new Integer(25),47,"Орехов Ким Германнович"));
-        arrayList.add(new Student(new Integer(9),37,"Баранов Мечеслав Онисимович"));
+        arrayList.add(new Student(new Integer(25),110,"Орехов Ким Германнович"));
+        arrayList.add(new Student(new Integer(9),12,"Баранов Мечеслав Онисимович"));
         arrayList.add(new Student(new Integer(1),61,"Егоров Агафон Николаевич"));
         return arrayList;
     }
