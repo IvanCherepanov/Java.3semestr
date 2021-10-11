@@ -70,15 +70,13 @@ public class LabClass implements Comparator<Student> {
         return o1.getMark()-o2.getMark();
     }
     public ArrayList<Student> inputs(){
-        arrayList.add(new Student(12,67,"Селиверстов Наум Никитевич"));
-        arrayList.add(new Student(10,65,"Миронов Осип Тимурович"));
-        arrayList.add(new Student(1,61,"Егоров Агафон Николаевич"));
-        arrayList.add(new Student(25,47,"Орехов Ким Германнович"));
-        arrayList.add(new Student(8,37,"Баранов Мечеслав Онисимович"));
+        arrayList.add(new Student(new Integer(12),67,"Селиверстов Наум Никитевич"));
+        arrayList.add(new Student(new Integer(10),65,"Миронов Осип Тимурович"));
+        arrayList.add(new Student(new Integer(5),66,"Козлов Арсений Богданович"));
+        arrayList.add(new Student(new Integer(25),47,"Орехов Ким Германнович"));
+        arrayList.add(new Student(new Integer(9),37,"Баранов Мечеслав Онисимович"));
+        arrayList.add(new Student(new Integer(1),61,"Егоров Агафон Николаевич"));
         return arrayList;
     }
-    public static void main(String[] args) {
-        LabClass labClass=new LabClass();
-        labClass.inputs();
-    }
+
 }

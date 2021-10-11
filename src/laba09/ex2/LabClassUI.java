@@ -27,12 +27,12 @@ public class LabClassUI extends JFrame {
         JButton addStudentBtn = new JButton("Добавить студента");
         JButton removeStudentBtn = new JButton("Удалить студента");
         JButton findStudentBtn = new JButton("Найти студента");
-        JButton sortStudentBtn = new JButton("Сортировать");
+        //JButton sortStudentBtn = new JButton("Сортировать");
 
         panel.add(addStudentBtn);
         panel.add(removeStudentBtn);
         panel.add(findStudentBtn);
-        panel.add(sortStudentBtn);
+        //panel.add(sortStudentBtn);
 
         //обработчик кнопок делаем
         addStudentBtn.addActionListener(new ActionListener() {
@@ -65,19 +65,17 @@ public class LabClassUI extends JFrame {
                 }
             }
         });
-        sortStudentBtn.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                sortStudents(Student::compareTo);
-            }
-        });
+
         // JTable
         //Object[] columns = new String[] {"ID","Средний балл","ФИО"};
         Object[] columns = {"ID","Средний балл","ФИО"};
-        Object [][] startStudents = new String[students.size()][3];
+        Object [][] startStudents = new Object[students.size()][3];
         for(int i = 0; i < students.size(); i++){
-            startStudents[i][0] = ((Integer)(students.get(i).getIdNumber())).toString();
+            //startStudents[i][0] = ((Integer)(students.get(i).getIdNumber())).toString();
+            startStudents[i][0] = ((students.get(i).getIdNumber()));
+            System.out.println(startStudents[i][0].getClass());
             startStudents[i][1] = ((Integer)(students.get(i).getMark())).toString();
+            System.out.println(startStudents[i][1].getClass());
             startStudents[i][2] = students.get(i).getSurname();
         }
         studTable = new JTable( new DefaultTableModel(startStudents, columns)){
@@ -85,11 +83,10 @@ public class LabClassUI extends JFrame {
             public Class getColumnClass(int column) {
                 switch (column) {
                     case 0:
-                        return Integer.class;
+                        return Integer.class; //работает с багом
                     case 1:
                         return Integer.class;
                     case 2:
-                        return String.class;
                     default:
                         return String.class;
                 }
@@ -101,12 +98,10 @@ public class LabClassUI extends JFrame {
             }
         };
 
-
         JTableHeader header = studTable.getTableHeader();
         header.setReorderingAllowed(false);
         header.setResizingAllowed(false);
         studTable.setAutoCreateRowSorter(true);
-
 
         // Adding comps
         getContentPane().add(new JScrollPane(studTable), BorderLayout.CENTER);
@@ -164,6 +159,7 @@ public class LabClassUI extends JFrame {
     }
 
     private void sortStudents(Comparator<Student> comp){
+
         /*TableRowSorter<TableModel> sorter = new TableRowSorter<TableModel>(studTable.getModel());
         studTable.setRowSorter(sorter);
 

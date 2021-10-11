@@ -4,16 +4,12 @@ import javax.swing.table.DefaultTableModel;
 public class help {
     public static void main(String[] args) {
         Object[][] data = {
-                {new Integer(1), "Don't Let Go", new Integer(179)},
-                {new Integer(2), "Photograph", new Integer(29)},
-                {new Integer(3), "Hash Pipe", new Integer(186)},
-                {new Integer(4), "Island In The Sun", new Integer(200)},
-                {new Integer(5), "Crab", new Integer(154)},
-                {new Integer(6), "Knock-Down Drag-Out", new Integer(128)},
-                {new Integer(7), "Smile", new Integer(158)},
-                {new Integer(8), "Simple Pages", new Integer(176)},
-                {new Integer(9), "Glorious Day", new Integer(160)},
-                {new Integer(10), "O Girlfriend", new Integer(230)}
+                {new Integer(12), "Don't Let Go", new Integer(179)},
+                {new Integer(10), "Photograph", new Integer(29)},
+                {new Integer(1), "Hash Pipe", new Integer(186)},
+                {new Integer(25), "Island In The Sun", new Integer(200)},
+                {new Integer(8), "Crab", new Integer(154)},
+
         };
         Object[] columns = {"Track #", "Title", "Length"};
         DefaultTableModel model = new DefaultTableModel(data,columns) {

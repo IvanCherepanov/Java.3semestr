@@ -1,11 +1,11 @@
 package laba09.ex2;
 
 public class Student implements Comparable<Student>{
-    private int idNumber;
+    private Integer idNumber;
     private int mark;
     private String surname;
 
-    public int getIdNumber() {
+    public Integer getIdNumber() {
         return idNumber;
     }
 
@@ -29,7 +29,7 @@ public class Student implements Comparable<Student>{
         this.surname = surname;
     }
 
-    public Student(int idNumber, int mark, String surname) {
+    public Student(Integer idNumber, int mark, String surname) {
         this.idNumber = idNumber;
         this.mark = mark;
         this.surname = surname;
