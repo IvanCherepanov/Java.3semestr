@@ -31,7 +31,6 @@ public class WaitList<E> implements IWaitList<E>{
 
     @Override
     public boolean contains(E element) {
-
         return content.contains(element);
     }
 

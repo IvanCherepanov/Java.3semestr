@@ -21,7 +21,8 @@ public class lab27 {
     Pattern p4 = Pattern.compile("\\d");
     String[] words1 = p4.split("java5tiger 77 java6mustang");
     for (String word : words1) {
-        System.out.println(word);
+        if (word!="")
+            System.out.println(word);
     }
 
     //использование replace

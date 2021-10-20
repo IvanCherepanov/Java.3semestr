@@ -96,6 +96,7 @@ public class LabClassUI extends JFrame {
                 return false;
             }
         };
+
         studTable = new JTable(model);
         JTableHeader header = studTable.getTableHeader();
         header.setReorderingAllowed(false);

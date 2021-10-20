@@ -49,19 +49,21 @@ public class laba8 {
         System.out.println(ex3.toString());
         ex3.add("end");
 
-        System.out.println("______3_part______");
-        UnfairWaitList<String> ex4=new UnfairWaitList<String>();
+        System.out.println("______4_part______");
+        UnfairWaitList<String> ex4 = new UnfairWaitList<String>();
         System.out.println(ex4.isEmpty());
         ex4.add("first");
         ex4.add("second");
         ex4.add("third");
         System.out.println(ex4.toString());
-        ex4.remove("second");
+        ex4.remove("first");
+        //ex4.remove();
+        System.out.println(ex4.toString());
+        ex4.remove("first");
         System.out.println(ex4.toString());
         ex4.add("end");
         ex4.add("begin");
         System.out.println(ex4.toString());
-        ex4.moveToBack("third");
-        System.out.println(ex4.toString());
+
     }
 }

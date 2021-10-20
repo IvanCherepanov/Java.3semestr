@@ -24,15 +24,17 @@ public class UnfairWaitList<E> extends WaitList<E> {
         }
     }*/
     public void remove(E element) {
-        this.content.remove(element);
+        if (element==this.content.peek()) {
+            moveToBack(element);
+        }
+        else this.content.remove(element);
     }
     //
     public void moveToBack(E element){
         boolean flag=content.contains(element);
         if(flag){
-            remove(element);
+            remove();
             content.add(element);
         }
-
     }
 }
